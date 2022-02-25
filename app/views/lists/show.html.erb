@@ -1,4 +1,7 @@
 <h4>
   <%= "#{@list.name}:" %>
 </h4>
-<%= @bookmark.comment %>
+  <% @list.movies.each do |movie| %>
+    <%= "#{movie.title}: #{movie.overview}" %>
+  <% end%>
+<%# <%= link_to 'Add a movie', new_bookmark_path, class: "btn btn-outline-success"%>
